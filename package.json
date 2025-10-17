@@ -1,0 +1,36 @@
+{
+  "name": "wormhole-cli",
+  "version": "1.0.0",
+  "description": "Command line utilities for Wormhole, interacting with both Ethereum and Solana.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poi-son-ivy/wormhole-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poi-son-ivy/wormhole-cli/issues"
+  },
+  "homepage": "https://github.com/poi-son-ivy/wormhole-cli#readme",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "axios": "^1.12.2",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.1",
+    "ethers": "^6.15.0",
+    "inquirer": "^12.10.0",
+    "ora": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^24.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

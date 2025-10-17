@@ -4,7 +4,13 @@
   "description": "Command line utilities for Wormhole, interacting with both Ethereum and Solana.",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "wormhole-cli": "index.js"
+  },
   "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

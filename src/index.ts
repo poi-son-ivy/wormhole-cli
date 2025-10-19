@@ -3,9 +3,9 @@ import { Command } from "commander";
 import chalk from 'chalk';
 
 // Import command modules (we'll create these next)
-import { setupMonitorCommand } from './cli/monitor.js';
+import { setupMonitorCommand } from './cli/monitor';
 //import { setupBalanceCommand } from './cli/balance.js';
-//import { setupValidatorCommand } from './cli/validator.js';
+import { setupValidatorCommand } from './cli/validator';
 //import { setupAnalyticsCommand } from './cli/analytics.js';
 import process from "process";
 
@@ -20,7 +20,7 @@ program
 // Register commands
 setupMonitorCommand(program);
 //setupBalanceCommand(program);
-//setupValidatorCommand(program);
+setupValidatorCommand(program);
 //setupAnalyticsCommand(program);
 
 program.parse(process.argv);

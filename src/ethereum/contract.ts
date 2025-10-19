@@ -24,12 +24,8 @@ export async function getContractInstance() {
 
 export async function getTransferStatus(transferId: string): Promise<any> {
   const contract = await getContractInstance();
-  if (contract) {
-    return await contract.getTransferStatus(transferId);
-  }
-  else {
-    
-  }
+
+  return await contract.getTransferStatus?.(transferId);
 }
 
 export async function recordTransferInitiation(
@@ -40,7 +36,7 @@ export async function recordTransferInitiation(
   targetChain: number
 ): Promise<any> {
   const contract = await getContractInstance();
-  const tx = await contract.recordTransferInitiation(
+  const tx = await contract.recordTransferInitiation?.(
     transferId,
     sender,
     recipient,
@@ -56,7 +52,7 @@ export async function recordTransferCompletion(
   amount: string
 ): Promise<any> {
   const contract = await getContractInstance();
-  const tx = await contract.recordTransferCompletion(
+  const tx = await contract.recordTransferCompletion?.(
     transferId,
     recipient,
     ethers.parseEther(amount)

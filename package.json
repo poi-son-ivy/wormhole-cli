@@ -11,6 +11,9 @@
     "build": "tsc",
     "start": "node --no-warnings=ExperimentalWarning dist/index.js",
     "dev": "tsx src/index.ts",
+    "test:eth": "npx hardhat test",
+    "compile:eth": "npx hardhat compile",
+    "deploy:eth": "npx hardhat run --config hardhat.config.ts scripts/deploy.ts --network sepolia",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,13 +32,20 @@
     "axios": "^1.12.2",
     "chalk": "^5.6.2",
     "commander": "^14.0.1",
-    "ethers": "^6.15.0",
+    "dotenv": "^17.2.3",
+    "hardhat-ethers": "^1.0.1",
+    "hardhat-waffle": "^0.0.1-security",
     "inquirer": "^12.10.0",
     "ora": "^9.0.0"
   },
   "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
     "@types/inquirer": "^9.0.9",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^24.8.1",
+    "chai": "^6.2.0",
+    "ethers": "^6.9.0",
+    "hardhat": "^3.0.7",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
     "tsx": "^4.20.6",

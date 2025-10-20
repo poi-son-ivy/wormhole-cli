@@ -8,11 +8,11 @@
     "wormhole-cli": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && tsc --project tsconfig.hardhat.json && chmod +x dist/index.js",
     "start": "node --no-warnings=ExperimentalWarning dist/index.js",
     "dev": "tsx src/index.ts",
     "test:eth": "npx hardhat test",
-    "compile:eth": "npx hardhat compile",
+    "compile:eth": "tsx node_modules/hardhat/internal/cli/cli.js compile",
     "deploy:eth": "npx hardhat run --config hardhat.config.ts scripts/deploy.ts --network sepolia",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -39,13 +39,14 @@
     "ora": "^9.0.0"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@nomicfoundation/hardhat-ethers": "^3.1.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@types/inquirer": "^9.0.9",
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.8.1",
-    "chai": "^6.2.0",
-    "ethers": "^6.9.0",
-    "hardhat": "^3.0.7",
+    "chai": "^4.5.0",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.26.0",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
     "tsx": "^4.20.6",

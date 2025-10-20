@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19
+pragma solidity ^0.8.19;
 
 /**
  * @title WormholeMonitor
@@ -110,7 +110,7 @@ pragma solidity ^0.8.19
      * @return TransferStatus struct containing details
      */
     function getTransferStatus(bytes32 transferId) external view returns (TransferStatus memory) {
-        return transferStatus[transderId];
+        return transferStatus[transferId];
     }
 
     /**
@@ -120,7 +120,7 @@ pragma solidity ^0.8.19
     function getChainId() internal view returns (uint16) {
         uint256 id;
         assembly {
-            id := chainid();
+            id := chainid()
         }
         return uint16(id);
     }

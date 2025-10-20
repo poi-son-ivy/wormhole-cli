@@ -1,4 +1,5 @@
 import { expect } from "chai";
+import "../hardhat.config";
 import { ethers } from "hardhat";
 
 describe("WormholeMonitor", function() {
@@ -16,7 +17,7 @@ describe("WormholeMonitor", function() {
     await monitor.waitForDeployment();
     const monitorAddress = await monitor.getAddress();
     
-    expect(monitorAddress).to.be.properAddress;
+    expect(ethers.isAddress(monitorAddress)).to.be.true;
     
     // Check if bridge addresses are stored correctly
     expect(await monitor.wormholeBridge()).to.equal(MOCK_WORMHOLE_BRIDGE);

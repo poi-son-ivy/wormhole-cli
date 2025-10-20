@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
-import { getTransferStatus } from '../ethereum/contract';
+import { getTransferStatus } from '../ethereum/contract.js';
 import { ethers } from 'ethers';
 
 export function setupValidatorCommand(program: Command): void {

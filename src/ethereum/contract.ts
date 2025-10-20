@@ -2,9 +2,14 @@ import { ethers } from "ethers";
 import * as dotenv from "dotenv";
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from 'url';
 
 // env vars
 dotenv.config();
+
+// ES module equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // contract ABI from artifacts
 const contractAbiPath = path.resolve(__dirname, "../../artifacts/contracts/WormholeMonitor.sol/WormholeMonitor.json");

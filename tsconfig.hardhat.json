@@ -1,20 +1,27 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "rootDir": "./",
     "module": "commonjs",
     "target": "es2020",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "noImplicitAny": false,
+    "strict": false,
+    "exactOptionalPropertyTypes": false,
+    "skipLibCheck": true,
     "typeRoots": [
       "./node_modules/@types",
       "./typechain-types"
-    ]
+    ],
+    "types": ["mocha", "node"]
   },
   "include": [
     "./scripts/**/*.ts",
     "./test/**/*.ts",
-    "./typechain-types/**/*.ts"
-  ]
+    "./typechain-types/**/*.ts",
+    "./hardhat.config.ts"
+  ],
+  "exclude": ["node_modules"]
 }

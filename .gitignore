@@ -10,6 +10,18 @@ yarn.lock
 dist/
 build/
 out/
+*.js.map
+*.d.ts
+*.d.ts.map
+
+# Hardhat
+artifacts/
+cache/
+typechain-types/
+hardhat.config.js
+hardhat.config.d.ts
+hardhat.config.d.ts.map
+hardhat.config.js.map
 
 # Environment variables
 .env

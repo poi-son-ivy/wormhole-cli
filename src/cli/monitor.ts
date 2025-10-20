@@ -2,7 +2,7 @@ import { Command } from "commander";
 import chalk from 'chalk';
 import ora from 'ora';
 
-import { getTransferStatus, recordTransferInitiation } from '../ethereum/contract';
+import { getTransferStatus, recordTransferInitiation } from '../ethereum/contract.js';
 import { ethers } from 'ethers';
 
 
